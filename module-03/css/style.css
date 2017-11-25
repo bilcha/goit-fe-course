@@ -1,0 +1,56 @@
+
+.offers div{
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	width: 50%;
+	padding-bottom: 30px;
+}
+.offers p{
+	padding-left: 20px;	
+	color: #385385;
+	font-weight: bold;
+}
+.offers{
+	text-align: center;
+}
+
+.main-region{
+	background-color: white;
+	width: 480px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Arial;
+	font-size: 0.8em;
+	margin-top: 300px;
+	margin-bottom: 300px;
+}
+body{ 
+	background-image: url("../img/page-bg-op.jpg");
+	background-repeat: no-repeat;
+
+}
+.main-region h2{
+	font-family: 'Pathway Gothic One', sans-serif;
+	color: #385385;
+}
+.main-region h4{
+	color: #385385;
+}
+.article{
+padding-top: 30px;
+margin-left: 37px;
+margin-right: 37px;
+}
+.principles-text{
+	padding-right: 40px;
+}
+.plane-img{
+	width: 406px;
+	height: 98px;
+	overflow: hidden;
+
+}
+.plane-img img{
+	margin-left: -12px;
+}
