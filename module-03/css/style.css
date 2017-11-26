@@ -28,6 +28,7 @@
 body{ 
 	background-image: url("../img/page-bg-op.jpg");
 	background-repeat: no-repeat;
+	background-position: center;
 
 }
 .main-region h2{
