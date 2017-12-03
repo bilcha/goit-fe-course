@@ -1,0 +1,134 @@
+body{ 
+	background-image: url("../img/page-bg-op.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+.main-region h2{
+	font-family: 'Pathway Gothic One', sans-serif;
+	color: #385385;
+}
+.main-region h4{
+	color: #385385;
+}
+
+.main-region{
+	background-color: white;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Arial;
+	font-size: 0.8em;
+	margin-top: 300px;
+	margin-bottom: 300px;
+	padding-bottom: 90px;
+	padding-top: 90px;
+}
+p{
+	color: #4e5050;
+}
+dd{
+	color: #4e5050;
+	margin-bottom: 20px;
+}
+dt{
+	color: #385385;
+	font-weight: bold;	
+	font-size: 14px;
+}
+
+.plane-img{
+	float: left;
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+
+.offers div{
+	display: inline-block;
+	vertical-align: top;
+	text-align: left;
+	width: 50%;
+	padding-bottom: 30px;
+}
+.offers li{
+	color: #385385;
+	font-weight: bold;
+	margin-bottom: 15px;
+	padding-left: 0;
+	text-align: left;
+}
+.offer-list{
+	columns: 2;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-item::before{
+	content: "\2192";
+	color: blue;
+	display: inline-block;
+}
+
+.column-one{
+	width: 73%;
+	padding-left: 60px;
+	display: inline-block;
+	vertical-align: top;
+	line-height: 1.5;
+	box-sizing: border-box;
+	padding-right: 30px;
+}
+.column-two{
+	width: 27%;
+	padding-right: 60px;
+	display: inline-block;
+	line-height: 1.5;
+	box-sizing: border-box;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.article{
+	counter-reset: list;
+}
+.principles::before {
+	color: white;
+	background-color: #38afe5;
+	border: 1px solid #4998ba;
+	border-radius: 50%;
+	counter-increment: list;
+	content: counter(list);
+	width: 25px;
+	height: 25px;
+	margin-right: 12px;
+	text-align: center;
+	line-height: 1.7;
+	font-weight:normal;
+	display: inline-block;
+	vertical-align: text-top;
+}
+dl{
+	width: calc(100%-30px);
+}
+.quote{
+	border: 1px solid #e9e6e6;
+	border-radius: 3px;
+	background-color: #fcfafa;
+	padding: 20px;
+	margin-bottom: 0;
+	border-bottom: 0;
+}
+hr{
+	margin: 37px 60px;
+}
+.author-name{
+text-align: center;
+font-size: 15px;
+}
+.author-position{
+text-align: center;
+}
