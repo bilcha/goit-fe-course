@@ -1,0 +1,77 @@
+body{ 
+	background-image: url("../img/page-bg-op.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+li{
+	list-style: none;
+
+}	
+ul{
+padding-left: 0px;
+}
+.menu-item a{
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 28px;
+	font-family: 'Pathway Gothic One', sans-serif;
+
+}
+.menu-logo{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'Dorsa', sans-serif;
+	font-size: 60px;
+	background: #fff;
+	border-radius: 50%;
+	padding: 25px 10px;
+}
+.menu{
+	width: 825px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 90px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.menu-item>a:hover {
+	color: #263555;
+	}
+
+.menu-item:hover>.submenu {
+	display: block;
+}
+
+.submenu-item a{
+	color: #6b7488;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: 'Pathway Gothic One', sans-serif;
+}
+.submenu-item {
+	text-align: center;
+}
+.submenu{
+	display: none;
+	position: absolute; 
+	background-color: #fff; 
+	padding: 5px;
+	border-radius: 3px;
+	top: 180px;
+}
+.submenu:before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #fff transparent;
+    position: relative;
+    top: -10px;
+    margin: 0 auto;
+}

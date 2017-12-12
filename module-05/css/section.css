@@ -1,0 +1,74 @@
+
+.destination-header{
+	display: block;
+	text-transform: uppercase;
+	font-family: 'Pathway Gothic One', sans-serif;
+	color: #263555;
+	font-size: 30px;
+	padding: 10px 0;
+
+}
+.destination-detail{
+	color: #e0e4e7;
+	background-color: #193149;
+	width: 144px;
+	padding-left: 5px;
+	z-index: 0;
+	position: absolute;
+	height: 100%;
+}
+h2{
+	text-transform: uppercase;
+	font-family: 'Pathway Gothic One', sans-serif;
+	font-size: 30px;
+	text-align: center;
+	font-weight: normal;
+	margin-top: 0px;
+	padding-top: 15px;
+}
+.destination-detail p{
+	color: #e0e4e7;
+	font-family: Arial;
+	font-size: 10px;
+	padding-bottom: 20px;
+	line-height: 1.5;
+}
+.details-button{
+	color: #000;
+	background-color: #faf6fb;
+	border: 1px solid #5a626f;
+	border-radius: 5px;
+	text-decoration: none;
+	font-family: Arial;
+	font-size: 12px;
+	padding: 5px 10px;
+    float: right;
+    margin-right: 10px;
+}
+
+.destination-items{
+	display: flex;
+	justify-content: space-between;
+}
+.destination-item{
+	display: flex;
+	position: relative;
+}
+
+.destination-image{
+	z-index: 1;
+}
+.destination-item:hover>.destination-detail {
+	z-index: 2;
+}
+
+.top-button{
+	display: inline-block;
+	color: #fff;
+	background: #38afe5;
+	border-radius: 50%;
+	padding: 10px 15px;
+	position: fixed;
+	right: 130px;
+	bottom: 50px;
+}
