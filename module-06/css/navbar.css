@@ -1,12 +1,5 @@
-body{ 
-	background-image: url("../img/page-bg-op.jpg");
-	background-repeat: no-repeat;
-	background-position: center;
-
-}
 li{
 	list-style: none;
-
 }	
 ul{
 padding-left: 0px;
@@ -17,7 +10,6 @@ padding-left: 0px;
 	text-transform: uppercase;
 	font-size: 28px;
 	font-family: 'Pathway Gothic One', sans-serif;
-
 }
 .menu-logo a{
 	text-decoration: none;
@@ -27,7 +19,7 @@ padding-left: 0px;
 	font-size: 60px;
 	background: #fff;
 	border-radius: 50%;
-	padding: 25px 10px;
+	padding: 25px 20px;
 }
 .menu{
 	width: 825px;
@@ -46,10 +38,8 @@ padding-left: 0px;
 	display: block;
 }
 .submenu:hover{
-	display: block;
+ 	display: block;
 }
-
-
 .submenu-item a{
 	color: #6b7488;
 	text-decoration: none;

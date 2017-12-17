@@ -1,0 +1,11 @@
+.gallery{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.gallery img{
+	margin-bottom: 40px;
+}
+.gallery img:nth-child(n+7){
+    margin-bottom: 0px;
+}
