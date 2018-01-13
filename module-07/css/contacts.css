@@ -1,0 +1,31 @@
+#map{
+	width: 400px;
+	padding-top: 100%;
+	display: inline-block;
+	background: #f6f4f4;
+}
+.contact-map{
+	flex-basis: 50%;
+}
+.contact-detail{
+	flex-basis: 25%;
+}
+.contact-form{
+	flex-basis: 25%;
+}
+caption{
+	text-align: left;
+	padding-bottom: 20px;
+	padding-top: 78px;
+}
+td .mailto{
+	color: #000;
+	text-decoration: none;
+}
+.contact-form input{
+	width: 100%;
+}
+.contact-form textarea{
+	width: 100%;
+
+}

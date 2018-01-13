@@ -42,8 +42,9 @@ padding-left: 0px;
  	display: block;	
  }	
  .submenu-item a:hover{
- color: #263555;
-}
+ 	background: #263555;
+ 	color: #fff;
+ }
 .submenu-item a{
 	color: #6b7488;
 	text-decoration: none;

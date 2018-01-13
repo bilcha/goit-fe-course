@@ -12,18 +12,19 @@ body{
 	color: #385385;
 	text-transform: uppercase;
 	font-size: 32px;
-
+	padding-bottom: 30px;
 }
 .main-region h4{
 	color: #385385;
 	font-size: 14px;
+	padding-bottom: 15px;
 }
 .main-region{
 	background-color: white;
 	width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
-	font-family: Arial;
+	font-family: Arial, sans-serif;
 	font-size: 0.8em;
 	margin-top: 100px;
 	padding: 90px 60px;
@@ -33,12 +34,14 @@ body{
 	justify-content: space-between;
 	box-sizing: border-box;
 }
+
 p{
 	color: #4e5050;
 }
 dd{
 	color: #4e5050;
 	margin-bottom: 20px;
+	padding-left: 40px;
 }
 dt{
 	color: #385385;
@@ -77,19 +80,17 @@ dt{
 	color: blue;
 	display: inline-block;
 }
-.main-region{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	line-height: 1.5;
 
-}
 .column-one{
 	flex-basis: 73%;
+	flex-wrap: wrap;
 
 }
 .column-two{
 	flex-basis: 24%;
+}
+.column-one .article-dscr{
+padding-bottom: 15px;
 }
 .clearfix::after {
     content: "";
@@ -122,12 +123,12 @@ dl{
 	border: 1px solid #e9e6e6;
 	border-radius: 3px;
 	background-color: #f2efef;
-	padding: 5px 18px;
+	padding: 18px;
 	border-bottom: none;
 	margin-bottom: 0;
 }
 hr{
-	margin: 37px 60px;
+	margin: 37px 0;
 	flex-basis: 100%;
 }
 .author-name{

@@ -1,0 +1,57 @@
+.price{
+	text-transform: uppercase;
+	color: #53bae8;
+	font-size: 13px;
+}
+.tour-image{
+	padding-right: 20px;
+	vertical-align: top;
+}
+h5{
+	color: #263555;
+	font-size: 12px;
+}
+.tour-dscr{
+	font-size: 10px;
+	padding-top: 10px;
+}
+.tour-info{
+	display: inline-block;
+	padding-right: 20px;
+}
+.tour{
+	display: inline-block;
+	box-sizing: border-box;
+
+}
+button, .button{
+	padding: 5px 10px;
+	border: 1px solid #bfb8b8;
+	border-radius: 5px;
+	background: #faf6fb;
+	font-size: 12px;
+	margin: 25px 0;
+}
+form input{
+	font-size: 10px;
+	background: #fcfafa;
+}
+form{
+	font-size: 10px;
+}
+select{
+	font-size: 10px;
+	background: #fcfafa;
+	margin: 5px 0 10px;
+	-webkit-appearance: button;
+	user-select: none;
+	background-image: url(../img/drop-image.png);
+   	background-position: 97% center;
+   	background-repeat: no-repeat;
+   	overflow: hidden;
+  	padding: 5px 5px;
+  	width: 210px;
+}
+.color-blue{
+	color: #53bae8;
+}
