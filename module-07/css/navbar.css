@@ -42,7 +42,7 @@ padding-left: 0px;
  	display: block;	
  }	
  .submenu-item a:hover{
- 	background: #263555;
+  	background: #263555;
  	color: #fff;
  }
 .submenu-item a{
@@ -51,9 +51,12 @@ padding-left: 0px;
 	text-transform: uppercase;
 	font-size: 20px;
 	font-family: 'Pathway Gothic One', sans-serif;
+	display: block;
 }
 .submenu-item {
 	text-align: center;
+	padding-right: 0;
+	padding-left: 0;
 }
 .submenu{
 	display: none;

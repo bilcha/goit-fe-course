@@ -9,6 +9,7 @@
 }
 .contact-detail{
 	flex-basis: 25%;
+	padding-top: 38px;
 }
 .contact-form{
 	flex-basis: 25%;
@@ -16,16 +17,38 @@
 caption{
 	text-align: left;
 	padding-bottom: 20px;
-	padding-top: 78px;
+	padding-top: 40px;
 }
 td .mailto{
-	color: #000;
+	color: #fa7e7e;
 	text-decoration: none;
 }
-.contact-form input{
+.input-items{
 	width: 100%;
+	margin-bottom: 15px;
+	font-size: 13px;
+	background: #fcfafa;
+	border: 1px solid #d4d0d0;
+	padding: 5px 10px;
+	box-sizing: border-box;
 }
-.contact-form textarea{
-	width: 100%;
+form .form-button{
+	padding: 5px 20px;
+	border-radius: 5px;
+	font-size: 14px;
+	margin-left: 20px;
+	float: right;
+}
 
+td .phone{
+	text-decoration: none;
+	color: #000;
+}
+textarea{
+	font-family: Arial, sans-serif;
+	font-size: 13px;
+}
+.input-items::placeholder{
+	color: #263555;
+	text-transform: uppercase;
 }
