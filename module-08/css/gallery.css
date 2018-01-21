@@ -33,8 +33,9 @@ img{
 	background-image: url(../img/zoom.png);
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 4rem;
-	height: 4rem;
+	background-size: cover;
+    width: 2rem;
+    height: 2rem;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -43,82 +44,3 @@ img{
 .gallery-item:hover .overlay{
 	opacity: 0.5;
 }
-/*
-@media(min-width: 768px){
-	.gallery{
-		display: flex;
-		flex-flow: row wrap;
-		justify-content: space-between;
-	}
-	.gallery-item {
-		flex-basis: 49%;
-	}	
-	.disable-item{
-		display: inline-block;
-	}
-	.footer{
-		flex-basis: 25%;
-	}
-	footer .contacts{
-		flex-grow: 0;
-		display: block;
-	}
-	.footer-item .hiden-in-mob{
-		display: inline-block;
-	}
-	.footer-item .phone::before{
-		display: none;
-	}
-	.footer-item .mailto::before{
-		display: none;
-	}
-	.gallery-item:nth-child(6){
-		margin-bottom: 2rem;
-	}
-	.gallery-item:nth-last-child(-n+3){
-		margin-bottom: 0;
-	}
-	.logo-item a{
-		font-size: 3.65rem;
-	}
-	.menu-item a{
-		font-size: 1.75rem;
-	}
-	.submenu-item a{
-		font-size: 1.25rem;
-	}
-	.footer{
-		font-size: 1rem
-	}
-	.footer-item .mailto{
-		font-size: 0.75rem;
-	}
-	.footer-item .phone{
-		font-size: 0.75rem;
-	}
-	body .copyright{
-		font-size: 0.75rem;
-}
-
-@media(min-width: 1024px){
-	.gallery-item {
-		flex-basis: 32%;
-	}
-	.visible-in-desktop{
-		display: inline-block;
-	}
-	.logo-item{
-		flex-basis: auto;
-		order: 2;
-	}
-	.menu-item{
-		flex-basis: auto;
-	}
-	.main-region h2{
-		font-size: 2rem;
-	}
-	.submenu-item a{
-		font-size: 1.25rem;
-	}
-}
-*/

@@ -6,7 +6,9 @@
 .menu{
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+    width: 50%;
+    min-width: 14rem;
+    margin: auto;
 	min-height: 13rem;
 
 }
@@ -91,8 +93,9 @@ li{
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 0.3rem 0.3rem 0.3rem;
+    border-width: 0 0.31rem 0.31rem 0.31rem;
     border-color: transparent transparent #fff transparent;
     position: relative;
+    top: -0.55rem;
     margin: 0 auto;
 }

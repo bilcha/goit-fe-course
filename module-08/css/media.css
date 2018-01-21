@@ -53,9 +53,17 @@
 	}
 	body .copyright{
 		font-size: 0.75rem;
+	}
+	.plus{
+		display: none;
+	}
 }
 
 @media(min-width: 1024px){
+	.menu{
+		width: 100%;
+		justify-content: space-between;
+	}
 	.gallery-item {
 		flex-basis: 32%;
 	}
@@ -77,4 +85,9 @@
 	}
 	.submenu{
 		top: 8rem;
+	}
+	.top-button{
+		right: 1rem;
+	}
+
 }
