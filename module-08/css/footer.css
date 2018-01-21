@@ -1,0 +1,115 @@
+footer{
+	background-color: #30455b;
+	min-width: 480px;
+	max-width: 1000px;
+	font-family: Arial, sans-serif;;
+	font-size: 0.85rem;
+	padding: 2.5rem;
+	line-height: 1.5;
+	text-transform: uppercase;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	box-sizing: border-box;
+	margin: auto
+}
+li a{
+	color: #fff;
+	text-decoration: none;
+}
+li p{
+	color: #fff;
+	margin: 0;
+}
+.mailto{
+	text-transform: lowercase;
+	font-size: 0.65rem;
+}
+.phone{
+	font-size: 0.65rem;
+}
+.phone::before{
+	content: '';
+	background-image: url(../img/phone-icon.png);
+	background-size: cover;
+	background-position: center;
+	display: inline-block;
+	width: 0.75rem;
+	height: 1rem;
+	margin-right: 0.75rem;
+	overflow: visible;
+}
+.mailto::before{
+	content: '';
+	background-image: url(../img/mail-icon.png);
+	background-size: cover;
+	background-position: center;
+	display: inline-block;
+	width: 0.75rem;
+	height: 1rem;
+	margin-right: 0.75rem;
+	padding-left: 0.75rem;
+
+}
+.contacts{
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-around;
+}
+
+.socials{
+	display: flex;
+	justify-content: center;
+	padding: 1.25rem;
+}
+ .twitter { 
+	display: inline-block;
+	background: url(../img/sprite.png)no-repeat;
+ 	background-position: -40px -40px; 
+ 	width: 40px; 
+ 	height: 40px; 
+ 	margin-right: 1rem;
+}
+.fb { 	
+	display: inline-block;
+	background: url('../img/sprite.png')no-repeat;
+	background-position: -0px -0px; 
+	width: 40px; 
+	height: 40px; 
+	margin-right: 1rem;
+}
+.google { 
+	display: inline-block;
+	background: url('../img/sprite.png')no-repeat;
+	background-position: -40px -0px; 
+	width: 40px; 
+	height: 40px; 
+	margin-right: 1rem;
+}
+.linkedin { 
+	display: inline-block;
+	background: url('../img/sprite.png')no-repeat;
+	background-position: -0px -40px; 
+	width: 40px;
+	height: 40px;
+	margin-right: 1rem;
+}
+.copyright{
+	margin-top: 0;
+	color: #fff;
+	font-family: Arial;
+	font-size: 0.56rem;
+	text-align: center;
+}
+.twitter:hover{
+	 filter: saturate(800%);
+}
+.fb:hover{
+	 filter: saturate(800%);
+}
+.google:hover{
+	 filter: saturate(800%);
+}
+.linkedin:hover{
+	 filter: saturate(800%);
+}
