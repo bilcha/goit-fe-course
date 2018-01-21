@@ -57,6 +57,11 @@
 	.plus{
 		display: none;
 	}
+	.fb, .google, .linkedin, .twitter{ 
+    	width: 2.5rem;
+    	height: 2.5rem;
+    	margin: 0 0.5rem;
+	}
 }
 
 @media(min-width: 1024px){
