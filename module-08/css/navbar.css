@@ -7,7 +7,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	height: 10rem;
+	min-height: 13rem;
 
 }
 li{
@@ -83,7 +83,7 @@ li{
 	background-color: #fff; 
 	padding: 0.25rem;
 	border-radius: 3px;
-	top: 7rem;
+	top: 9rem;
 }
 .submenu:before{
     content: "";
