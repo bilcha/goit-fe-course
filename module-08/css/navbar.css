@@ -1,17 +1,14 @@
 .menu-region{
-	min-width: 225px;
-	max-width: 830px;
+	min-width: 14rem;
+	max-width: 51.5rem;
 	margin: auto;
 }
 .menu{
-	/*margin-top: 90px;*/
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-/*	align-items: center;*/
-	height: 15rem;
-/*	margin-left: auto;
-	margin-right: auto;*/
+	height: 10rem;
+
 }
 li{
 	list-style: none;
@@ -32,20 +29,24 @@ li{
 	background: #fff;
 	border-radius: 50%;
 	padding: 1.25rem 1rem;
-/*	display: block;*/
+
 }
 .logo-item{
-	justify-content: center;
-	order: 0;
+	display: flex;
+    align-items: center; 
+    justify-content: center;
     flex-basis: 100%;
-	margin: auto;
+    order: 1;
+    padding: 1rem;
 
 }
 .menu-item{
-	text-align: center;
-	justify-content: space-between;
-	order: 1;
-	flex-basis: 33%;
+	display: flex;
+    align-items: center; 
+    justify-content: center;
+    flex-basis: 33%;
+    order: 2;
+    padding: 0.5rem;
 }
 
 .menu-item>a:hover {
@@ -67,7 +68,7 @@ li{
 	color: #6b7488;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-size: 0.75rem;
+	font-size: 0.85rem;
 	font-family: 'Pathway Gothic One', sans-serif;
 	display: block;
 }
@@ -82,7 +83,7 @@ li{
 	background-color: #fff; 
 	padding: 0.25rem;
 	border-radius: 3px;
-/*	top: 6rem;*/
+	top: 7rem;
 }
 .submenu:before{
     content: "";
@@ -90,7 +91,7 @@ li{
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 0 5px 5px 5px;
+    border-width: 0 0.3rem 0.3rem 0.3rem;
     border-color: transparent transparent #fff transparent;
     position: relative;
     margin: 0 auto;

@@ -4,7 +4,7 @@ footer{
 	max-width: 1000px;
 	font-family: Arial, sans-serif;;
 	font-size: 0.85rem;
-	padding: 2.5rem;
+	padding: 1rem 4rem 2.5rem;
 	line-height: 1.5;
 	text-transform: uppercase;
 	display: flex;
@@ -12,6 +12,10 @@ footer{
 	justify-content: space-around;
 	box-sizing: border-box;
 	margin: auto
+}
+
+.footer{
+	padding-top: 1rem;
 }
 li a{
 	color: #fff;
@@ -23,10 +27,10 @@ li p{
 }
 .mailto{
 	text-transform: lowercase;
-	font-size: 0.65rem;
+	font-size: 0.625rem;
 }
 .phone{
-	font-size: 0.65rem;
+	font-size: 0.625rem;
 }
 .phone::before{
 	content: '';
@@ -34,10 +38,12 @@ li p{
 	background-size: cover;
 	background-position: center;
 	display: inline-block;
+	vertical-align: middle;
 	width: 0.75rem;
-	height: 1rem;
-	margin-right: 0.75rem;
-	overflow: visible;
+	height: 0.8rem;
+	padding-top: 0.5rem;
+	margin-right: 0.5rem;
+
 }
 .mailto::before{
 	content: '';
@@ -45,16 +51,20 @@ li p{
 	background-size: cover;
 	background-position: center;
 	display: inline-block;
-	width: 0.75rem;
+	vertical-align: middle;
+	width: 0.7rem;
 	height: 1rem;
-	margin-right: 0.75rem;
-	padding-left: 0.75rem;
+	margin-right: 0.5rem;
+	padding-left: 0.5rem;
 
 }
 .contacts{
 	flex-grow: 1;
 	display: flex;
 	justify-content: space-around;
+}
+.hiden-in-mob{
+	display: none;
 }
 
 .socials{
