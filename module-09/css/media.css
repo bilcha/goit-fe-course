@@ -1,26 +1,41 @@
 
 @media(min-width: 768px){
 	.main-region{
-		padding: 5rem 2.5rem;
+		padding: 5rem 3.5rem;
 	}	
-
-	.footer-item .phone::before{
-		display: none;
-	}
-	.footer-item .mailto::before{
-		display: none;
-	}
-	.logo-item a{
+		.logo-item a{
 		font-size: 3.65rem;
 	}
 	.menu-item a{
 		font-size: 1.75rem;
 	}
+	.submenu{
+		top: 11rem;
+	}
 	.submenu-item a{
 		font-size: 1.25rem;
 	}
+	.main-region h4,.offers li,dt{
+	font-size: 1rem;
+	}
+	.main-region p, dd{
+	font-size: 0.82rem;
+	}
+	.plane-img{
+	max-width: 22.5rem;
+	height: auto;
+	overflow: hidden;
+	float: left;
+	padding-right: 1rem;
+	padding-bottom: 1rem
+	}
 	.footer{
 		font-size: 1rem
+	}.footer-item .phone::before{
+		display: none;
+	}
+	.footer-item .mailto::before{
+		display: none;
 	}
 	.footer-item .mailto{
 		font-size: 0.75rem;
@@ -40,7 +55,7 @@
 
 @media(min-width: 1200px){
 	.main-region{
-		padding: 5.25rem 4rem;
+		padding: 5rem 3.75rem;
 	}
 	.menu{
 		width: 100%;
@@ -68,5 +83,4 @@
     	height: 2rem;
     	line-height: 2;
 	}
-
 }

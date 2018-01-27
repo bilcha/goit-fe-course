@@ -6,10 +6,10 @@ body{
 }
 .main-region{
 	background-color: #fff;
-	min-width: 30rem;
+	min-width: 35rem;
 	max-width: 62.5rem;
 	margin: auto;
-	padding: 3.75rem 2.5rem;
+	padding: 3.75rem 2.25rem;
 }
 .main-region h2{
 	font-family: 'Pathway Gothic One', sans-serif;
@@ -21,10 +21,12 @@ body{
 .main-region h4{
 	color: #385385;
 	font-size: 0.875rem;
-/*	padding-bottom: 1rem;*/
+}
+.main-region p{
+	color: #4e5050;
+	font-size: 0.75rem;
 }
 .top-button{
-	display: inline-block;
 	background: #38afe5;
 	border-radius: 50%;
 	position: fixed;
@@ -41,8 +43,7 @@ body{
 	color: #fff;
 }
 .plane-img{
-	max-width: 25rem;
-	height: 6.25rem;
+	height: 6.5rem;
 	overflow: hidden;
 }
 .clearfix::after {
@@ -55,10 +56,10 @@ dd{
 	color: #4e5050;
 	margin-bottom: 1.25rem;
 	padding-left: 2.3rem;
+	font-size: 0.75rem
 }
 dt{
-	color: #385385;
-	font-weight: bold;	
+	color: #385385;	
 	font-size: 0.875rem;
 }
 .offers div{
@@ -70,11 +71,12 @@ dt{
 }
 .offers li{
 	color: #385385;
+	font-size: 0.875rem;
 	font-weight: bold;
 	margin-bottom: 1rem;
 	padding-left: 0;
 	text-align: left;
-	font-size: 0.875rem;
+	
 }
 .offer-list{
 	columns: 2;
@@ -110,19 +112,20 @@ dt{
 }
 
 .frame{
+	max-width: 260px;
 	border: 1px solid #e9e6e6;
 	border-radius: 3px;
 	background-color: #f2efef;
 	padding: 1rem;
 	border-bottom: none;
-	margin-bottom: 0;
+	margin: auto;
 }
 hr{
-	margin: 37px 0;
+	margin: 2.25rem 0;
 }
 .author-name{
 	text-align: center;
-	font-size: 1rem;
+	font-size: 0.875rem;
 	padding-top: 1.875rem;
 }
 .author-position{

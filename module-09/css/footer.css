@@ -1,6 +1,6 @@
 .footer-wrap{
 	background-color: #30455b;
-	min-width: 30rem;
+	min-width: 35rem;
 	max-width: 62.5rem;
 	font-family: Arial, sans-serif;;
 	font-size: 0.85rem;
@@ -51,7 +51,10 @@ li p{
 }
 
 .socials{
+	min-width: 35rem;
+	max-width: 62.5rem;
 	padding: 1.25rem;
+	margin: auto;
 }
 .fb, .google, .linkedin, .twitter{ 
 	max-width: 100%; 
@@ -86,6 +89,8 @@ li p{
 	 filter: saturate(800%);
 }
 .copyright{
+	min-width: 35rem;
+	max-width: 62.5rem;
 	margin-top: 0;
 	color: #fff;
 	font-family: Arial;

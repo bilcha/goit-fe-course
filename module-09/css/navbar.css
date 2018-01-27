@@ -1,11 +1,10 @@
 .menu-region{
-	min-width: 14rem;
+	min-width: 36rem;
 	max-width: 51.5rem;
 	margin: auto;
 }
 .menu{
-/*	display: flex;
-	flex-wrap: wrap;*/
+
     min-width: 14rem;
     margin: auto;
 	min-height: 13rem;
