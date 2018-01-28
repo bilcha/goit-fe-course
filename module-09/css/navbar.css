@@ -1,5 +1,5 @@
 .menu-region{
-	min-width: 36rem;
+	min-width: 36.5rem;
 	max-width: 51.5rem;
 	margin: auto;
 }
@@ -32,20 +32,12 @@ li{
 
 }
 .logo-item{
-/*	display: flex;
-    align-items: center; 
-    justify-content: center;*/
     flex-basis: 100%;
-   /* order: 1;*/
     padding: 1rem;
 
 }
 .menu-item{
-/*	display: flex;
-    align-items: center; 
-    justify-content: center;*/
     flex-basis: 33%;
-    order: 2;
     padding: 0.5rem;
 }
 
