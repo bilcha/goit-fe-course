@@ -1,0 +1,111 @@
+footer{
+	background-color: #30455b;
+	min-width: 30rem;
+	max-width: 62.5rem;
+	font-family: Arial, sans-serif;;
+	font-size: 0.85rem;
+	padding: 1rem 4rem 2.5rem;
+	line-height: 1.5;
+	text-transform: uppercase;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	box-sizing: border-box;
+	margin: auto
+}
+
+.footer{
+	padding-top: 1rem;
+}
+li a{
+	color: #fff;
+	text-decoration: none;
+}
+li p{
+	color: #fff;
+	margin: 0;
+}
+.mailto{
+	text-transform: lowercase;
+	font-size: 0.625rem;
+}
+.phone{
+	font-size: 0.625rem;
+}
+.phone::before{
+	content: '';
+	background-image: url(../img/phone-icon.png);
+	background-size: cover;
+	background-position: center;
+	display: inline-block;
+	vertical-align: middle;
+	width: 0.75rem;
+	height: 0.8rem;
+	padding-top: 0.5rem;
+	margin-right: 0.5rem;
+}
+.mailto::before{
+	content: '';
+	background-image: url(../img/mail-icon.png);
+	background-size: cover;
+	background-position: center;
+	display: inline-block;
+	vertical-align: middle;
+	width: 0.7rem;
+	height: 1rem;
+	margin-right: 0.5rem;
+	padding-left: 0.5rem;
+}
+.contacts{
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-around;
+}
+.hiden-in-mob{
+	display: none;
+}
+
+.socials{
+	display: flex;
+	justify-content: center;
+	padding: 1.25rem;
+}
+.fb, .google, .linkedin, .twitter{ 
+	max-width: 100%; 
+	background-size: 100%; 
+	background-image: url('../img/sprite-responsive.png'); 
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 0.25rem;
+}
+.fb { 
+	background-position: 0 0%; 
+}
+.google { 
+	background-position: 0 33.333333%; 
+}
+.linkedin { 
+	background-position: 0 66.666667%; 
+}
+.twitter { 
+	background-position: 0 100%; 
+}
+.twitter:hover{
+	 filter: saturate(800%);
+}
+.fb:hover{
+	 filter: saturate(800%);
+}
+.google:hover{
+	 filter: saturate(800%);
+}
+.linkedin:hover{
+	 filter: saturate(800%);
+}
+.copyright{
+	margin-top: 0;
+	color: #fff;
+	font-family: Arial;
+	font-size: 0.56rem;
+	text-align: center;
+}

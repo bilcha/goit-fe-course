@@ -1,0 +1,43 @@
+*
+{margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body{ 
+	background-image: url("../img/page-bg-op.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.main-region{
+	background-color: #fff;
+	min-width: 30rem;
+	max-width: 62.5rem;
+	margin: auto;
+	padding: 3.75rem 2.5rem;
+	box-sizing: border-box;
+}
+.main-region h2{
+	font-family: 'Pathway Gothic One', sans-serif;
+	color: #385385;
+	text-transform: uppercase;
+	font-size: 1.75rem;
+	padding-bottom: 2rem;
+}
+.top-button{
+	display: inline-block;
+	background: #38afe5;
+	border-radius: 50%;
+	position: fixed;
+	right:  0.25rem;
+	bottom: 15.5rem;
+	transform: rotate(90deg);
+    width: 1.7rem;
+    height: 1.7rem;
+    text-align: center;
+    line-height: 1.7;
+}
+.top-button a{
+	text-decoration: none;
+	color: #fff;
+}
