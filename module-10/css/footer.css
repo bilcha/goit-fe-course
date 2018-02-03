@@ -1,4 +1,4 @@
-footer{
+.footer{
 	background-color: #30455b;
 	min-width: 30rem;
 	max-width: 62.5rem;
@@ -13,26 +13,27 @@ footer{
 	box-sizing: border-box;
 	margin: auto
 }
-
-.footer{
-	padding-top: 1rem;
+.footer__column{
+	list-style: none;
 }
-li a{
+.footer__link{
 	color: #fff;
 	text-decoration: none;
 }
-li p{
+.footer__contact{
 	color: #fff;
 	margin: 0;
 }
-.mailto{
+.footer__mailto{
+	color: #fff;
+	text-decoration: none;
 	text-transform: lowercase;
 	font-size: 0.625rem;
 }
-.phone{
+.footer__phone{
 	font-size: 0.625rem;
 }
-.phone::before{
+.footer__phone::before{
 	content: '';
 	background-image: url(../img/phone-icon.png);
 	background-size: cover;
@@ -44,7 +45,7 @@ li p{
 	padding-top: 0.5rem;
 	margin-right: 0.5rem;
 }
-.mailto::before{
+.footer__mailto::before{
 	content: '';
 	background-image: url(../img/mail-icon.png);
 	background-size: cover;
@@ -56,7 +57,7 @@ li p{
 	margin-right: 0.5rem;
 	padding-left: 0.5rem;
 }
-.contacts{
+.footer__column--flex{
 	flex-grow: 1;
 	display: flex;
 	justify-content: space-around;
@@ -70,42 +71,21 @@ li p{
 	justify-content: center;
 	padding: 1.25rem;
 }
-.fb, .google, .linkedin, .twitter{ 
-	max-width: 100%; 
-	background-size: 100%; 
-	background-image: url('../img/sprite-responsive.png'); 
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0 0.25rem;
+
+.socials__item{
+	display: flex;
+ 	margin: 0 auto;
+  	cursor: pointer;
+
 }
-.fb { 
-	background-position: 0 0%; 
-}
-.google { 
-	background-position: 0 33.333333%; 
-}
-.linkedin { 
-	background-position: 0 66.666667%; 
-}
-.twitter { 
-	background-position: 0 100%; 
-}
-.twitter:hover{
-	 filter: saturate(800%);
-}
-.fb:hover{
-	 filter: saturate(800%);
-}
-.google:hover{
-	 filter: saturate(800%);
-}
-.linkedin:hover{
-	 filter: saturate(800%);
-}
-.copyright{
+.footer-wrap__copyright{
 	margin-top: 0;
 	color: #fff;
 	font-family: Arial;
 	font-size: 0.56rem;
 	text-align: center;
+}
+
+.socials__item--bright:hover path{
+	fill: #ff8400;
 }

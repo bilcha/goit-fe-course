@@ -4,10 +4,21 @@ padding: 0;
 box-sizing: border-box;
 }
 body{ 
-	background-image: url("../img/page-bg-op.jpg");
+	background-image: url("../img/page-bg.png");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	body{ 
+	background-image: url("../img/page-bg@x2.png");
+	}
+}
+
+img{
+	display: block;
+	width: 100%;
+	height: auto;
 }
 .main-region{
 	background-color: #fff;
@@ -17,7 +28,7 @@ body{
 	padding: 3.75rem 2.5rem;
 	box-sizing: border-box;
 }
-.main-region h2{
+.main-region__title{
 	font-family: 'Pathway Gothic One', sans-serif;
 	color: #385385;
 	text-transform: uppercase;
@@ -37,7 +48,7 @@ body{
     text-align: center;
     line-height: 1.7;
 }
-.top-button a{
+.top-button__link{
 	text-decoration: none;
 	color: #fff;
 }
