@@ -15,6 +15,7 @@
 }
 .footer__column{
 	list-style: none;
+	color: #fff;
 }
 .footer__link{
 	color: #fff;
@@ -35,25 +36,25 @@
 }
 .footer__phone::before{
 	content: '';
-	background-image: url(../img/phone-icon.png);
+	background-image: url(../img/phone.svg);
 	background-size: cover;
 	background-position: center;
 	display: inline-block;
 	vertical-align: middle;
-	width: 0.75rem;
-	height: 0.8rem;
+    width: 0.6rem;
+    height: 0.6rem;
 	padding-top: 0.5rem;
 	margin-right: 0.5rem;
 }
 .footer__mailto::before{
 	content: '';
-	background-image: url(../img/mail-icon.png);
+	background-image: url(../img/mail.svg);
 	background-size: cover;
 	background-position: center;
 	display: inline-block;
 	vertical-align: middle;
-	width: 0.7rem;
-	height: 1rem;
+    width: 0.5rem;
+    height: 0.7rem;
 	margin-right: 0.5rem;
 	padding-left: 0.5rem;
 }
@@ -62,7 +63,7 @@
 	display: flex;
 	justify-content: space-around;
 }
-.hiden-in-mob{
+.footer__hiden-in-mob{
 	display: none;
 }
 
@@ -74,7 +75,7 @@
 
 .socials__item{
 	display: flex;
- 	margin: 0 auto;
+ 	margin: 0 0.5rem;
   	cursor: pointer;
 
 }

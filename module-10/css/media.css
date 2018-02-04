@@ -1,5 +1,15 @@
-/*
+
 @media(min-width: 768px){
+	.menu__logo-link{
+		font-size: 3.65rem;
+	}
+	.menu__link{
+		font-size: 1.75rem;
+	}
+	.ssubmenu__link{
+		font-size: 1.25rem;
+	}
+
 	.main-region{
 		padding: 5rem 2.5rem;
 	}	
@@ -8,95 +18,83 @@
 		flex-flow: row wrap;
 		justify-content: space-between;
 	}
-	.gallery-item {
+	.gallery__item-wrapper {
 		flex-basis: 49%;
 	}	
-	.disable-item{
+	/*.disable-item{
 		display: inline-block;
-	}
+	}*/
 	.footer{
 		flex-basis: 25%;
+		font-size: 1rem;
 	}
-	footer .contacts{
+	.footer__column{
 		flex-grow: 0;
 		display: block;
 	}
-	.footer-item .hiden-in-mob{
+	.footer__phone::before{
+		display: none;
+	}
+	.footer__mailto::before{
+		display: none;
+	}
+	.footer__hiden-in-mob{
 		display: inline-block;
 	}
-	.footer-item .phone::before{
-		display: none;
-	}
-	.footer-item .mailto::before{
-		display: none;
-	}
-	.gallery-item:nth-child(6){
+
+/*	.gallery-item:nth-child(6){
 		margin-bottom: 2rem;
 	}
 	.gallery-item:nth-last-child(-n+3){
 		margin-bottom: 0;
-	}
-	.logo-item a{
-		font-size: 3.65rem;
-	}
-	.menu-item a{
-		font-size: 1.75rem;
-	}
-	.submenu-item a{
-		font-size: 1.25rem;
-	}
-	.footer{
-		font-size: 1rem
-	}
-	.footer-item .mailto{
+	}*/
+	
+	.footer__mailto{
 		font-size: 0.75rem;
 	}
-	.footer-item .phone{
+	.footer__phone{
 		font-size: 0.75rem;
 	}
-	body .copyright{
+	.footer-wrap__copyright{
 		font-size: 0.75rem;
 	}
-	.plus{
+	.footer__plus{
 		display: none;
-	}
-	.fb, .google, .linkedin, .twitter{ 
-    	width: 2.5rem;
-    	height: 2.5rem;
-    	margin: 0 0.5rem;
 	}
 }
 
 @media(min-width: 1024px){
-	.main-region{
-		padding: 5.25rem 4rem;
-	}
 	.menu{
 		width: 100%;
 		justify-content: space-between;
 	}
-	.gallery-item {
-		flex-basis: 32%;
-	}
-	.visible-in-desktop{
-		display: inline-block;
-	}
-	.logo-item{
+	.menu__item{
+		flex-basis: auto;
+	}	
+	.menu__logo-item{
 		flex-basis: auto;
 		order: 2;
 	}
-	.menu-item{
-		flex-basis: auto;
-	}
-	.main-region h2{
-		font-size: 2rem;
-	}
-	.submenu-item a{
+	.submenu__link{
 		font-size: 1.25rem;
 	}
 	.submenu{
 		top: 8rem;
 	}
+	.main-region{
+		padding: 5.25rem 4rem;
+	}
+	.main-region__title{
+		font-size: 2rem;
+	}
+	.gallery__item-wraper{
+		flex-basis: 32%;
+	}
+/*	.visible-in-desktop{
+		display: inline-block;
+	}*/
+	
+	
 	.top-button{
 		right: 1.5rem;
 		width: 2rem;
@@ -105,4 +103,3 @@
 	}
 
 }
-*/
