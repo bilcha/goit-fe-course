@@ -1,0 +1,20 @@
+.socials{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	padding: 1.25rem;
+}
+
+.socials__item{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+ 	margin: 0 0.5rem;
+  	cursor: pointer;
+}
+.socials__item--color:hover path{
+	fill: #ff8400;
+}

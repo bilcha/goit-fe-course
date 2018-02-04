@@ -1,7 +1,8 @@
 *
 {margin: 0;
 padding: 0;
-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+        box-sizing: border-box;
 }
 body{ 
 	background-image: url("../img/page-bg.png");
@@ -9,7 +10,7 @@ body{
 	background-position: center;
 	background-size: cover;
 }
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 192dpi) {
 	body{ 
 	background-image: url("../img/page-bg@x2.png");
 	}
@@ -26,7 +27,8 @@ img{
 	max-width: 62.5rem;
 	margin: auto;
 	padding: 3.75rem 2.5rem;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 .main-region__title{
 	font-family: 'Pathway Gothic One', sans-serif;
@@ -42,7 +44,9 @@ img{
 	position: fixed;
 	right:  0.25rem;
 	bottom: 15.5rem;
-	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	        transform: rotate(90deg);
     width: 1.7rem;
     height: 1.7rem;
     text-align: center;
