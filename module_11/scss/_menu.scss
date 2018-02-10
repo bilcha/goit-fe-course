@@ -1,0 +1,109 @@
+// Utilities
+@import 'colors';
+@import 'mixins';
+@import 'fonts';
+
+
+.menu-region{
+	@include wrapper;
+}
+.menu{
+	display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: auto;
+	min-height: 13rem;
+	    @media(min-width: 1024px){
+ 			width: 100%;
+        	justify-content: space-around;
+			}
+}
+.menu__item{
+	@include center-flex ('all');
+	@include list-settings;
+    flex-basis: 33%;
+    order: 2;
+    padding: 0.5rem;
+	    @media(min-width: 1024px){
+			flex-basis: auto;
+			}
+	&:hover>.submenu {
+	display: block;
+		}
+}	
+.menu__link{
+	@include link-settings;
+	@include font-settings;
+		@media(min-width: 768px){
+			font-size:  1.75rem;
+			}
+	
+	&:hover{
+	color: $hover-color;
+	}
+}
+.menu__logo-link{
+	@include link-settings (none, uppercase, $hover-color);
+	@include font-settings ($font-Dorsa, 2rem);
+	background: #fff;
+	border-radius: 50%;
+	padding: 1.25rem 1rem;
+		@media(min-width: 768px){
+			font-size: 3.65rem;
+			}
+}
+.menu__logo-item{
+	@include center-flex ('all')
+	flex-basis: 100%;
+	order: 1;
+    padding: 1rem;
+    	@media(min-width: 1024px){
+			flex-basis: auto;
+			order: 2;
+			}
+}
+
+.submenu__link{
+	@include link-settings (none, uppercase, $hover-color);
+	@include font-settings ($font-Pathway, 0.85rem);
+	display: block;
+		@media(min-width: 768px){
+			font-size:  1.25rem;
+			}
+	&:hover{
+  	background: #263555;
+ 	color: #fff;
+ }
+}
+.submenu__item {
+	list-style: none;
+	text-align: center;
+}
+.submenu{
+	display: none;
+	position: absolute; 
+	background-color: #fff; 
+	padding: 0.25rem;
+	border-radius: 3px;
+	top: 9rem;
+		@media(min-width: 1024px){
+			top: 8rem;
+			}
+
+	&:hover{
+ 	display: block;	
+ 	}	
+
+	&:before{
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0.31rem 0.31rem 0.31rem;
+    border-color: transparent transparent #fff transparent;
+    position: relative;
+    top: -0.55rem;
+    margin: 0 auto;
+	}
+}

@@ -1,0 +1,45 @@
+@mixin background-img($path: '', $size: cover, $repeat: no-repeat, $pos: center){
+	background-image: url($path);
+	background-size: $size; 
+	background-repeat: $repeat;
+	background-position: $pos;
+}
+
+@mixin center-flex($type: 'all') {
+	display: flex;
+	@if $type=='all' {
+		justify-content: center;
+		align-items: center;
+	}
+	@else if $type=='horizontal'{
+		justify-content: center;
+	}
+	@else if $type=='vertical'{
+		align-items: center;
+	}
+	@else if $type=='space-around'{
+		justify-content: space-around;
+	}
+	@else if $type=='space-between'{
+		justify-content: space-between;
+	}
+}
+@mixin font-settings($ffamily: $font-Pathway, $fsize: 1.25rem){
+		font-family: $ffamily;
+		font-size: $fsize;
+}
+
+@mixin list-settings($lstyle: none, $color: #fff) {
+	list-style: $lstyle;
+	color: $color;
+}
+@mixin link-settings($txt-decor: none, $txt-tranform: uppercase, $color: #fff) {
+	text-decoration: $txt-decor;
+	text-transform: $txt-tranform;
+	color: $color;
+}
+@mixin wrapper($width: 30rem, $height: 62.5rem, $margin: auto){
+	min-width: $width;
+	max-width: $height;
+	margin: $margin;
+}
