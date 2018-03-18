@@ -1,27 +1,58 @@
 const alphabet = "qwertyuiop[]asdfghjkl;'zxcvbnm,./";
 
 function addKeyboardLayout (stringAlfabet, lineBrOne, lineBrTwo) {
-  const aArray = stringAlfabet.split("");
-  let keyboard;
-  return keyboard = [aArray.slice(0, aArray.indexOf(lineBrOne)), aArray.slice(aArray.indexOf(lineBrOne), aArray.indexOf(lineBrTwo)), aArray.slice(aArray.indexOf(lineBrTwo))];
+ const aArray = stringAlfabet.split("");
+ const keyboard = [aArray.slice(0, aArray.indexOf(lineBrOne)), aArray.slice(aArray.indexOf(lineBrOne), aArray.indexOf(lineBrTwo)),  aArray.slice(aArray.indexOf(lineBrTwo))];
+ return keyboard;
 }
-
+// проверка
 const alphabetAr = addKeyboardLayout (alphabet, "a", "z");
 console.log(alphabetAr);
 
-function getRandCharInRow(row, i){
-  let j = Math.floor(Math.random() * row[i].length);
-  return row[i][j];
+function getRand(arrayName){
+  let randIdx = Math.floor(Math.random() * arrayName.length);
+  return randIdx;
 }
+
+function getRandCharInRow(arrayName, arrayIdx){
+  let result = arrayName[arrayIdx][getRand(arrayName[arrayIdx])];
+  return result;
+}
+
 // проверка
 console.log (getRandCharInRow(alphabetAr, 0));
 
 function getRandCharInAlph() {
-  var args = Array.from(arguments);
-  let i = Math.floor(Math.random() * args.length);
-  let k = Math.floor(Math.random() * args[i].length);
-  return args[i][k];
+  let arrayName = Array.from(arguments);
+  let arrayIdx = getRand(arrayName);
+  let result = arrayName[arrayIdx][getRand(arrayName[arrayIdx])];
+  return result;
 }
-// проверка
+
+// // проверка
 console.log (getRandCharInAlph(alphabet));
 
+
+// // arrow func
+
+// const addKeyboardLayout = (stringAlfabet, lineBrOne, lineBrTwo) => {
+//  const aArray = stringAlfabet.split("");
+//  return keyboard = [aArray.slice(0, aArray.indexOf(lineBrOne)), aArray.slice(aArray.indexOf(lineBrOne), aArray.indexOf(lineBrTwo)),  aArray.slice(aArray.indexOf(lineBrTwo))];
+// }
+// const getRand = arrayName => Math.floor(Math.random() * arrayName.length);
+
+// const getRandCharInRow = (arrayName, arrayIdx) => arrayName[arrayIdx][getRand(arrayName[arrayIdx])];
+
+// const getRandCharInAlph = (...rest) => {
+//   let arrayName = Array.from(rest);
+//   let arrayIdx = getRand(arrayName);
+//   return arrayName[arrayIdx][getRand(arrayName[arrayIdx])];
+// }
+
+// // проверка
+// const alphabetAr = addKeyboardLayout (alphabet, "a", "z");
+// console.log(alphabetAr);
+
+// console.log (getRandCharInRow(alphabetAr, 0));
+
+// console.log (getRandCharInAlph(alphabet));
