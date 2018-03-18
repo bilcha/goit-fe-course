@@ -44,9 +44,8 @@ console.log (getRandCharInAlph(alphabet));
 // const getRandCharInRow = (arrayName, arrayIdx) => arrayName[arrayIdx][getRand(arrayName[arrayIdx])];
 
 // const getRandCharInAlph = (...rest) => {
-//   let arrayName = Array.from(rest);
-//   let arrayIdx = getRand(arrayName);
-//   return arrayName[arrayIdx][getRand(arrayName[arrayIdx])];
+// let arrayIdx = getRand(rest);
+// return rest[arrayIdx][getRand(rest[arrayIdx])];
 // }
 
 // // проверка
