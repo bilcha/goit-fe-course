@@ -9,23 +9,22 @@ function addKeyboardLayout (stringAlfabet, lineBrOne, lineBrTwo) {
 const alphabetAr = addKeyboardLayout (alphabet, "a", "z");
 console.log(alphabetAr);
 
-function getRand(arrayName){
-  let randIdx = Math.floor(Math.random() * arrayName.length);
+function getRand(arr){
+  const randIdx = Math.floor(Math.random() * arr.length);
   return randIdx;
 }
 
-function getRandCharInRow(arrayName, arrayIdx){
-  let result = arrayName[arrayIdx][getRand(arrayName[arrayIdx])];
+function getRandCharInRow(arr, arrayIdx){
+  const result = arr[arrayIdx][getRand(arr[arrayIdx])];
   return result;
 }
 
 // проверка
 console.log (getRandCharInRow(alphabetAr, 0));
 
-function getRandCharInAlph() {
-  let arrayName = Array.from(arguments);
-  let arrayIdx = getRand(arrayName);
-  let result = arrayName[arrayIdx][getRand(arrayName[arrayIdx])];
+function getRandCharInAlph(arr) {
+  const arrayIdx = getRand(arr);
+  const result = getRandCharInRow(arr, arrayIdx);
   return result;
 }
 
@@ -39,12 +38,12 @@ console.log (getRandCharInAlph(alphabet));
 //  const aArray = stringAlfabet.split("");
 //  return keyboard = [aArray.slice(0, aArray.indexOf(lineBrOne)), aArray.slice(aArray.indexOf(lineBrOne), aArray.indexOf(lineBrTwo)),  aArray.slice(aArray.indexOf(lineBrTwo))];
 // }
-// const getRand = arrayName => Math.floor(Math.random() * arrayName.length);
+// const getRand = arr => Math.floor(Math.random() * arr.length);
 
-// const getRandCharInRow = (arrayName, arrayIdx) => arrayName[arrayIdx][getRand(arrayName[arrayIdx])];
+// const getRandCharInRow = (arr, arrayIdx) => arr[arrayIdx][getRand(arr[arrayIdx])];
 
 // const getRandCharInAlph = (...arr) => {
-//   let arrayIdx = getRand(arr);
+//   const arrayIdx = getRand(arr);
 //   return arr[arrayIdx][getRand(arr[arrayIdx])];
 // }
 
