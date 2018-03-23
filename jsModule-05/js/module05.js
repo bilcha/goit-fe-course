@@ -31,26 +31,30 @@ const keyboard = {
     langs: ['en', 'ru', 'ua'],
     currentLang: ''
 };
-let langChoice = prompt ("Выберете язык  en-0, ru-1, ua-2", 0);
 
-
-switch (langChoice) {
-  case "0":
-    alert("You choose english");  
-    keyboard.currentLang = keyboard.langs[langChoice];
-    break;
-  case "1" :
-    alert("Вы выбрали русский язык");
-    keyboard.currentLang = keyboard.langs[langChoice];
-    break;
-  case "2" : 
-    alert("Ви вибрали українську мову"); 
-    keyboard.currentLang = keyboard.langs[langChoice];
-    break;
-  default : 
-     alert("был выбран не доступный язык");
-    
+doPrompt = function () {
+  let langChoice = prompt ("Выберете язык  en-0, ru-1, ua-2", 0);
+  switch (langChoice) {
+    case "0":
+      alert("You choose english");  
+      keyboard.currentLang = keyboard.langs[0];
+      break;
+    case "1" :
+      alert("Вы выбрали русский язык");
+      keyboard.currentLang = keyboard.langs[1];
+      break;
+    case "2" : 
+      alert("Ви вибрали українську мову"); 
+      keyboard.currentLang = keyboard.langs[2];
+      break;
+    default : 
+      alert("был выбран не доступный язык");
+      doPrompt();
+    }
 }
+
+doPrompt();
+
 // проврка
 console.log(keyboard.currentLang);
 

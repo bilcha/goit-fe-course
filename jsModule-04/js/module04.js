@@ -14,23 +14,22 @@ function getRand(arr){
   return randIdx;
 }
 
-function getRandCharInRow(arr, arrayIdx){
-  const result = arr[arrayIdx][getRand(arr[arrayIdx])];
+function getRandCharInRow(arr, arrayIdx, callback){
+  const result = arr[arrayIdx][callback(arr[arrayIdx])];
   return result;
 }
 
 // проверка
-console.log (getRandCharInRow(alphabetAr, 0));
+console.log (getRandCharInRow(alphabetAr, 0, getRand));
 
-function getRandCharInAlph(arr) {
-  const arrayIdx = getRand(arr);
-  const result = getRandCharInRow(arr, arrayIdx);
+
+function getRandCharInAlph(arr, callback) {
+  const result = getRandCharInRow(arr, callback(arr), callback);
   return result;
 }
 
 // // проверка
-console.log (getRandCharInAlph(alphabet));
-
+console.log (getRandCharInAlph(alphabetAr, getRand));
 
 // // arrow func
 
