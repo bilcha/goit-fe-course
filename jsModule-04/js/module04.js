@@ -15,8 +15,9 @@ function getRand(arr){
 }
 
 function getRandCharInRow(arr, arrayIdx, callback){
-  const result = arr[arrayIdx][callback(arr[arrayIdx])];
-  return result;
+	const rowInArr = arr[arrayIdx];
+ 	const result = rowInArr[callback(rowInArr)];
+ 	return result;
 }
 
 // проверка
@@ -24,8 +25,9 @@ console.log (getRandCharInRow(alphabetAr, 0, getRand));
 
 
 function getRandCharInAlph(arr, callback) {
-  const result = getRandCharInRow(arr, callback(arr), callback);
-  return result;
+	const arrayIdx = callback(arr);
+  	const result = getRandCharInRow(arr, arrayIdx, callback);
+  	return result;
 }
 
 // // проверка
