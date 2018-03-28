@@ -23,11 +23,10 @@ function getRandCharInRow(arr, arrayIdx, callback){
 // проверка
 console.log (getRandCharInRow(alphabetAr, 0, getRand));
 
-
 function getRandCharInAlph(arr, callback) {
-	const arrayIdx = callback(arr);
-  	const result = getRandCharInRow(arr, arrayIdx, callback);
-  	return result;
+   const arrayIdx = callback(arr);       
+   const result = arr[arrayIdx][callback(arr[arrayIdx])];              
+   return result;
 }
 
 // // проверка
