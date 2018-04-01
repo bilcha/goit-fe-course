@@ -15,20 +15,22 @@ const keyboard = {
   currentLang: '',
   addLayout: function (layout, lang) {
     this.layouts[lang] = {};
-    this.layouts[lang][layoutRows[0]] = layout[0];
-    this.layouts[lang][layoutRows[1]] = layout[1]; 
-    this.layouts[lang][layoutRows[2]] = layout[2]; 
+    for (i = 0; i < 3; i++) {
+    this.layouts[lang][layoutRows[i]] = layout[i];
+    }
     if (this.langs.indexOf(lang) < 0){
       this.langs.push(lang);
-    }
+    }    
   }
 }
 keyboard.addLayout(createKeyboardLayout(alphabethEn, "a", "z"), "en");
 keyboard.addLayout(createKeyboardLayout(alphabethRu, "ф", "я"), "ru");
 keyboard.addLayout(createKeyboardLayout(alphabethUa, "ф", "я"), "ua");
 
-doPrompt = function () {
-  let langChoice = prompt ("Выберете язык  en-0, ru-1, ua-2", 0);
+let langChoice;
+do {
+  langChoice = prompt ("Выберете язык  en-0, ru-1, ua-2", 0);
+  langChoice = (langChoice == null) ? "-1" : langChoice;
   switch (langChoice) {
     case null: break;
     case "0":
@@ -43,29 +45,25 @@ doPrompt = function () {
       alert("Ви вибрали українську мову"); 
       keyboard.currentLang = keyboard.langs[2];
       break;
-    default : 
+    case "-1" :
+      break;
+    default :
+      langChoice = null;
       alert("был выбран не доступный язык");
-      doPrompt();
     }
-}
-
-doPrompt();
-
+} while (langChoice == null);
 
 // проврка
 console.log(keyboard.currentLang);
 
-let path = "layouts." + keyboard.currentLang;
-let getCurrentLang = path.split('.').reduce(function(prev, curr) {       
-        return prev ? prev[curr] : undefined}, keyboard);
-// проверка
-console.log(getCurrentLang);
-
 const getRand = arr => Math.floor(Math.random() * arr.length);
 
-const getRandCharInAlph = (langObj) => {
-  let layoutRow = langObj[layoutRows[getRand(layoutRows)]]
-  return layoutRow[getRand(layoutRow)];
+function getRandCharInAlph (langObj, callback){
+  let rowArr = Object.values(langObj);
+  const arrayIdx = callback(rowArr);       
+  const result = rowArr[arrayIdx][callback(rowArr[arrayIdx])];              
+  return result;  
 }
+
 // проверка
-console.log(getRandCharInAlph(getCurrentLang));
+console.log(getRandCharInAlph(keyboard.layouts[keyboard.currentLang], getRand));
