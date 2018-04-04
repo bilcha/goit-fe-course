@@ -30,27 +30,17 @@ keyboard.addLayout(createKeyboardLayout(alphabethUa, "ф", "я"), "ua");
 let langChoice;
 do {
   langChoice = prompt ("Выберете язык  en-0, ru-1, ua-2", 0);
-  langChoice = (langChoice == null) ? "-1" : langChoice;
-  switch (langChoice) {
-    case null: break;
-    case "0":
-      alert("You choose english");  
-      keyboard.currentLang = keyboard.langs[0];
-      break;
-    case "1" :
-      alert("Вы выбрали русский язык");
-      keyboard.currentLang = keyboard.langs[1];
-      break;
-    case "2" : 
-      alert("Ви вибрали українську мову"); 
-      keyboard.currentLang = keyboard.langs[2];
-      break;
-    case "-1" :
-      break;
-    default :
-      langChoice = null;
-      alert("был выбран не доступный язык");
+  if (langChoice == null) {
+    langChoice = -1;
+  } else {
+    let res = parseInt(langChoice);
+    if (res in [0,1,2]) { 
+      keyboard.currentLang = keyboard.langs[res];
+    } else { 
+      alert("был выбран недоступный язык");
+      langChoice = null
     }
+  }
 } while (langChoice == null);
 
 // проврка
@@ -59,10 +49,13 @@ console.log(keyboard.currentLang);
 const getRand = arr => Math.floor(Math.random() * arr.length);
 
 function getRandCharInAlph (langObj, callback){
+  if (langObj == null){
+    return "";
+  }
   let rowArr = Object.values(langObj);
   const arrayIdx = callback(rowArr);       
   const result = rowArr[arrayIdx][callback(rowArr[arrayIdx])];              
-  return result;  
+  return result; 
 }
 
 // проверка
