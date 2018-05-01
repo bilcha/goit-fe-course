@@ -1,0 +1,17 @@
+.timer {
+  font-size: 2rem;
+}
+.exercise {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.keyboard button {
+  padding: 1rem;
+  font-size: 1.125rem;
+}
+.keyboard__btn--active {
+  border: 1px solid transparent;
+  background-color: #03a9f4;
+  color: #fff;
+}
