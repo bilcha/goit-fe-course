@@ -4,72 +4,59 @@ const string = "qryte";
 const charsArr = string.split("").reverse();
 const timerOutput = document.querySelector(".timer");
 const exercise = document.querySelector(".exercise");
-const kbd = document.querySelector(".keyboard");
 const lsKey = 'keyKPS';
-let buttons; 
+let bestScore;
+let inputData;
+let storedKPS = localStorage.getItem(lsKey);
+
 const timer = {
   id: ""
 };
-
 
 exercise.innerHTML = string;
 
 function init(){
   sec = 0;
-  createRow(lang);
-  buttons = document.querySelectorAll(".button");
+  inputData = document.createElement("input");
+    inputData.classList.add("inputData");
+    timerOutput.after(inputData);
+
+  bestScore = document.createElement("div");
+    bestScore.classList.add("bestScore");
+    exercise.before(bestScore);
+    bestScore.innerHTML = storedKPS;
+
 };
 init();
-
 
 function tick(){
   sec++;
   timerOutput.childNodes[0].nodeValue = sec;
  };
 
+inputData.addEventListener("keydown", keydown);
 
-function createRow (arr) {
-  for (let i = 0; i < arr.length; i++) {
-
-  let keyBtn = document.createElement("button");
-    keyBtn.classList.add("button");
-    keyBtn.textContent = arr[i];
-    kbd.appendChild(keyBtn);
- }
-}
-
-window.addEventListener("keydown", keydown);
-window.addEventListener("keyup", function() {
-  buttons.forEach(function(btn) {
-    btn.classList.remove('keyboard__btn--active')})
-});
 
 function keydown(event){
   if (timer.id == "" ) {
     timer.id = setInterval(tick, 1000);
   }
    let c = keyCodeToChar(event.which);    
-   if (lang.indexOf(c) >= 0) {
-      buttons.forEach(function(btn) {
-        if (btn.innerHTML == c){
-          btn.classList.toggle('keyboard__btn--active');
-        }
-    });
-   }
-  
+
   if (c == charsArr[charsArr.length - 1]){
     charsArr.pop();
   }
+  else {
+    event.preventDefault();
+    };
   if (charsArr.length == 0){
     clearInterval(timer.id);
-    let storedKPS = localStorage.getItem(lsKey);
-     console.log(storedKPS);
     let currentKPS = parseInt(timerOutput.innerHTML)/string.length;
+    alert(`your score: ${currentKPS}`)
     if ((storedKPS == null) || (storedKPS > currentKPS)){
       localStorage.setItem(lsKey, currentKPS);
-      console.log(currentKPS)
-    }
-    return
+       }
+    return 
   }
  }
 
