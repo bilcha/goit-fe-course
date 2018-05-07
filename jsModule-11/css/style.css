@@ -1,0 +1,18 @@
+input{
+  border-radius: 0.25rem;
+  line-height: 1.25rem;
+}
+p{
+  margin-bottom: 0;
+  font-weight: bold;
+  font-family: Tahoma, sans-serif;
+}
+
+button{
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  margin-top: 2rem;
+  margin-right: 1rem;
+  font-weight: bold;
+  font-family: Tahoma, sans-serif;
+}
