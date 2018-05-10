@@ -25,6 +25,10 @@ function init(){
     bestScore.classList.add("bestScore");
     exercise.before(bestScore);
     bestScore.innerHTML = storedKPS;
+  
+  bestScoreDiscr = document.createElement("p");
+    bestScoreDiscr.textContent = "Best score(symb/sec):";
+    bestScore.before(bestScoreDiscr);
 
 };
 init();
@@ -34,29 +38,36 @@ function tick(){
   timerOutput.childNodes[0].nodeValue = sec;
  };
 
-inputData.addEventListener("keydown", keydown);
+inputData.addEventListener("keypress", keypress);
 
-
-function keydown(event){
-  if (timer.id == "" ) {
-    timer.id = setInterval(tick, 1000);
-  }
+function keypress(event){
+  
    let c = keyCodeToChar(event.which);    
 
   if (c == charsArr[charsArr.length - 1]){
     charsArr.pop();
+    if (timer.id == "" ) {
+    timer.id = setInterval(tick, 1000);
+  }
   }
   else {
     event.preventDefault();
     };
   if (charsArr.length == 0){
-    clearInterval(timer.id);
-    let currentKPS = parseInt(timerOutput.innerHTML)/string.length;
-    alert(`your score: ${currentKPS}`)
-    if ((storedKPS == null) || (storedKPS > currentKPS)){
-      localStorage.setItem(lsKey, currentKPS);
-       }
-    return 
+          
+   if (timer.id != "") {          
+      clearInterval(timer.id);
+      timer.id = "";
+      let currentKPS = parseInt(timerOutput.innerHTML)/string.length;
+
+      setTimeout(() => {
+        alert(`your score: ${currentKPS}`);
+      }, 1000);
+
+      if ((storedKPS == null) || (storedKPS > currentKPS)){
+        localStorage.setItem(lsKey, currentKPS);
+      }
+   }
   }
  }
 
@@ -77,7 +88,6 @@ function keyCodeToChar(keyCode) {
         '186': '59', //IE Key codes
         '189': '45'  //IE Key codes
     }
-
   let result = keyCode;
   if (toASCII.hasOwnProperty(result)) {
         result = toASCII[result];
@@ -90,5 +100,4 @@ function keyCodeToChar(keyCode) {
     return result;
 }
 
-    
-
+  
