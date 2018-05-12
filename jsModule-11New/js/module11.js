@@ -42,7 +42,6 @@ function allUserClick(){
      getAllUsers()
     .then(responseJson => {
       renderTd(responseJson)
-      consoleDiv.innerHTML += JSON.stringify(responseJson)+'<br>';
   })
     .catch(err => {});
 }
@@ -96,5 +95,5 @@ const result = compiled({
   });
 console.log(result)
 const container = document.querySelector(".table");
-container.innerHTML = "<table>"+result+"</table>";
+container.innerHTML = result;
 }

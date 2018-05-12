@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module-11</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="user-data">
+
+    <p>Name:</p>
+    <input class="user-name" type="text" title="Name" name="user-name">
+    <p>Age:</p>
+    <input class="user-age" type="text" title="Age" name="user-age"><br>
+    <button class="create-btn">Create user</button>
+    <button class="update-btn">Update user</button>
+    <p>Id:</p>
+    <input class="user-id" type="text" title="id" name="user-id">
+    <button class="del-btn">Delete user</button><br>
+    <button class="all-user">Show all users</button>
+  </div>
+  <div class="console"></div>
+  <div class="table"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+
+  <script type = "hbs/template" id = "tableData">
+    <table>
+    <% data.forEach(row => { %>
+      <tr class="table__row">
+      <% for (let key in row){%>
+        <td class="table__data"><%- row[key] %></td>
+        <%}; %>
+        </tr>
+        <% }); %>
+        </table>
+      </script>
+
+      <script src="js/module11.js"></script>
+    </body>
+    </html>

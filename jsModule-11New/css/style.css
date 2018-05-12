@@ -11,11 +11,18 @@ p{
 button{
   border-radius: 0.25rem;
   padding: 0.25rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-right: 1rem;
   font-weight: bold;
   font-family: Tahoma, sans-serif;
 }
-td{
-  border: 1px solid red;
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0px;
+  margin-top: 1rem;
+}
+table, th, td{
+  padding: 5px;
+  border: 1px solid #808080;
 }

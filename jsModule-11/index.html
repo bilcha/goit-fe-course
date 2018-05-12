@@ -21,6 +21,23 @@
       <button class="all-user">All users</button>
     </div>
     <div class="console"></div>
+    <div class="table"></div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+
+  <script type = "hbs/template" id = "tableData">
+    <table>
+    <% data.forEach(row => { %>
+    <tr class="table__row">
+      <% for (let key in row){%>
+            <td="table__data"><%- row[key] %></td>
+       <%}; %>
+    </tr>
+    <% }); %>
+    </table>
+   </script>
+    
 	
     <script src="js/module11.js"></script>
   </body>
