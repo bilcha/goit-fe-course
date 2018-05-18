@@ -26,3 +26,6 @@ table, th, td{
   padding: 5px;
   border: 1px solid #808080;
 }
+.console{
+  margin-top: 1rem;
+}

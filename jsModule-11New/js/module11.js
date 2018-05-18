@@ -14,10 +14,12 @@ delBtn.addEventListener("click", delClick)
 allUserBtn.addEventListener("click", allUserClick)
 
 function createClick(){
+
   addUser(name.value, age.value)
     .then(responseJson => {
-      consoleDiv.innerHTML += JSON.stringify(responseJson)+'<br>';
-      userId.value =  responseJson.data._id;
+      consoleDiv.innerHTML += `New user <b>${responseJson.data.name}</b> added <br>`;
+      name.value = '';
+      age.value = '';
   })
     .catch(err => {});
 }
@@ -25,7 +27,10 @@ function createClick(){
 function updateClick(){
    updateUser(userId.value, {name: name.value, age: age.value})
     .then(responseJson => {
-      consoleDiv.innerHTML += JSON.stringify(responseJson)+'<br>';
+      consoleDiv.innerHTML += `User with id <b>${responseJson.data.id}</b> was update <br>`;
+      name.value = '';
+      age.value = '';
+      userId.value = '';
   })
     .catch(err => {});
 }
@@ -33,7 +38,8 @@ function updateClick(){
 function delClick(){
    removeUser(userId.value)
     .then(responseJson => {
-      consoleDiv.innerHTML += JSON.stringify(responseJson)+'<br>';
+      consoleDiv.innerHTML += `User named <b>${responseJson.data.name}</b> was deleted <br>`;
+      userId.value = '';
   })
     .catch(err => {});
 }
@@ -74,7 +80,13 @@ return fetch(apiUrl+id, {
   .then(response => response.json()) 
 } 
 
+  // if ((name.value == '') || (age.value == '')){
+  //   alert ('!!!!')
+  // };
+  // else{};
+
 function updateUser(id, user){
+
     return fetch(apiUrl+id, {
     body: JSON.stringify(user),
     headers: {
@@ -83,7 +95,7 @@ function updateUser(id, user){
     method: 'PUT',
   })
   .then(response => response.json()) 
-}
+ }
 
 
 function renderTd(users) {
