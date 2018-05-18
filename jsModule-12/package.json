@@ -1,0 +1,25 @@
+{
+  "name": "gulp-starter-kit",
+  "version": "1.0.0",
+  "description": "![banner.png](https://cdn.rawgit.com/axZerk/gulp-starter-kit/741020f0/banner.png)",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axZerk/gulp-starter-kit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axZerk/gulp-starter-kit/issues"
+  },
+  "homepage": "https://github.com/axZerk/gulp-starter-kit#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  }
+}
