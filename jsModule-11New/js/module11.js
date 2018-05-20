@@ -25,6 +25,10 @@ function createClick(){
 }
 
 function updateClick(){
+
+if ((name.value == '') || (age.value == '')){
+      alert ('Please fulfil the form!')}
+ else{
    updateUser(userId.value, {name: name.value, age: age.value})
     .then(responseJson => {
       consoleDiv.innerHTML += `User with id <b>${responseJson.data.id}</b> was update <br>`;
@@ -33,7 +37,10 @@ function updateClick(){
       userId.value = '';
   })
     .catch(err => {});
-}
+  }
+ }
+  
+
 
 function delClick(){
    removeUser(userId.value)
@@ -80,10 +87,7 @@ return fetch(apiUrl+id, {
   .then(response => response.json()) 
 } 
 
-  // if ((name.value == '') || (age.value == '')){
-  //   alert ('!!!!')
-  // };
-  // else{};
+
 
 function updateUser(id, user){
 
