@@ -17,7 +17,7 @@ function createClick(){
 
   addUser(name.value, age.value)
     .then(responseJson => {
-      consoleDiv.innerHTML += `New user <b>${responseJson.data.name}</b> added <br>`;
+      consoleDiv.innerHTML = `New user <b>${responseJson.data.name}</b> added <br>`;
       name.value = '';
       age.value = '';
   })
@@ -31,7 +31,7 @@ if ((name.value == '') || (age.value == '')){
  else{
    updateUser(userId.value, {name: name.value, age: age.value})
     .then(responseJson => {
-      consoleDiv.innerHTML += `User with id <b>${responseJson.data.id}</b> was update <br>`;
+      consoleDiv.innerHTML = `User with id <b>${responseJson.data.id}</b> was update <br>`;
       name.value = '';
       age.value = '';
       userId.value = '';
@@ -45,7 +45,7 @@ if ((name.value == '') || (age.value == '')){
 function delClick(){
    removeUser(userId.value)
     .then(responseJson => {
-      consoleDiv.innerHTML += `User named <b>${responseJson.data.name}</b> was deleted <br>`;
+      consoleDiv.innerHTML = `User named <b>${responseJson.data.name}</b> was deleted <br>`;
       userId.value = '';
   })
     .catch(err => {});
@@ -109,7 +109,7 @@ const compiled = _.template(source);
 const result = compiled({
   data: users.data
   });
-console.log(result)
+// console.log(result)
 const container = document.querySelector(".table");
 container.innerHTML = result;
 }
