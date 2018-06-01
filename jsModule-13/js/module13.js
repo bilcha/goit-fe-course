@@ -10,10 +10,9 @@ const fields = document.querySelectorAll(".validate");
 submitBtn.addEventListener("click", validate);
 
 let result = {};
-
 function validate(evt){
   evt.preventDefault();
-  let regTel = /^\+?(38)?0{1}[1-9]{1}[0-9]{8}$/;
+  let regTel = /^\+?[1-9]{3}\s?[1-9]{2}\s?[1-9]{2}\s?[1-9]{2}\s?[0-9]{3}$/;
   let regName = /^(([А-ЯЁ]{1}[а-яё]{1,29})|([A-Z]{1}[a-z]{1,29}))$/u;
   let telValid = regTel.test(tel.value);
   let nameValid = regName.test(firstname.value);
