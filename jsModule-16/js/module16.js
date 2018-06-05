@@ -33,10 +33,10 @@ class Rectangle extends Shape {
     this.height = newHeight;
   }
   getDims(){
-     return (this.width, this.height)
+     return [this.width, this.height]
   }
   draw(){
-    console.log(`Drowing a Rectangle at:\n (x: ${this.x}, y: ${this.y})\nWith Dimantion:\n width: ${this.width}, height: ${this.height}\nFilled with color: ${this.color}`)
+    console.log(`Drawing a Rectangle at:\n (x: ${this.getCoords()[0]}, y: ${this.getCoords()[1]})\nWith Dimension:\n width: ${this.getDims()[0]}, height: ${this.getDims()[1]}\nFilled with color: ${this.getColor()}`)
   }
 }
 let rectangle1 = new Rectangle("#f00", 10, 20, 30, 40);
@@ -54,9 +54,8 @@ class Circle extends Shape {
     this.radius = val;
   }
   draw(){
-    console.log(`Drowing a Circle at:\n (x: ${this.x}, y: ${this.y})\nWith Dimantion:\n radius: ${this.radius}\nFilled with color: ${this.color}`)
+    console.log(`Drawing a Circle at:\n (x: ${this.getCoords()[0]}, y: ${this.getCoords()[1]})\nWith Dimension:\n radius: ${this.getRadius()}\nFilled with color: ${this.getColor()}`)
   }
 }
-let circle1 = new Circle("#fff", 30, 40, 255);
+let circle1 = new Circle("#fff", 50, 60, 255);
 circle1.draw();
-
